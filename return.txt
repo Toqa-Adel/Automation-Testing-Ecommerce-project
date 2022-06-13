@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="12" time="414.764">
+<testcase classname="User could register with valid data" name="user Register successfully" time="65.461">
+<system-out><![CDATA[Given user go to registration page..........................................passed
+When user enter "Toqa" and "Adel" and "toka.adel@gmail.com" and "258369" and "258369".passed
+And user clicks on register button..........................................passed
+Then user could register successfully.......................................passed
+And return to homepage......................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="User could log in with valid email and password" name="user login successfully" time="29.595">
+<system-out><![CDATA[Given user navigates login page.............................................passed
+When user login with "toka.adel@gmail.com" and "258369".....................passed
+And user click on login button..............................................passed
+Then user could login successfully..........................................passed
+And redirected to homepage..................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="User could reset password successfully" name="reset his/her password successfully" time="21.038">
+<system-out><![CDATA[Given user login to website by "toka.adel@gmail.com"........................passed
+When user click forget password.............................................passed
+And enter email "toka.adel@gmail.com".......................................passed
+And user enter recover......................................................passed
+Then confirmation message appears...........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="User could search for any product" name="Logged User could search for any product" time="31.719">
+<system-out><![CDATA[Given user could login by "toka.adel@gmail.com" and "258369"................passed
+When user go to search box And enter "shoes"................................passed
+Then click search button....................................................passed
+And user could see search result page.......................................passed
+]]></system-out>
+</testcase>
+<testcase classname="switching between currencies US-Euro" name="Logged User could switch between currencies US-Euro" time="29.766">
+<system-out><![CDATA[Given user could logged by "toka.adel@gmail.com" and "258369"...............passed
+When user go to currencies options..........................................passed
+And user select currency "Euro" and currency switched.......................passed
+]]></system-out>
+</testcase>
+<testcase classname="selecting different Categories" name="Logged user could select different Categories" time="29.862">
+<system-out><![CDATA[Given user logged by "toka.adel@gmail.com" and "258369".....................passed
+When user navigates to category and select category.........................passed
+Then user navigate to sub category..........................................passed
+And user could review category products.....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="filter with color" name="Logged user could filter with color" time="33.862">
+<system-out><![CDATA[Given user logged in by "toka.adel@gmail.com" and "258369"..................passed
+When user navigate to category Apparel - shoes..............................passed
+And user select color.......................................................passed
+Then products would be filtered by color....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="select different tags" name="Logged user could select different tags" time="30.354">
+<system-out><![CDATA[Given user logged in by "toka.adel@gmail.com" and "258369"..................passed
+When browse any category....................................................passed
+And user select tag.........................................................passed
+Then Products tagged with selected tag......................................passed
+]]></system-out>
+</testcase>
+<testcase classname="add different products to Shopping cart" name="Logged user could add different products to Shopping cart" time="27.431">
+<system-out><![CDATA[Given user login to website "toka.adel@gmail.com" and "258369"..............passed
+When user search for a product "Pride and Prejudice"........................passed
+And user go to a product and press add to cart..............................passed
+Then product would be added to cart.........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="add different products to Wishlist" name="Logged user could add different products to Wishlist" time="26.918">
+<system-out><![CDATA[Given user logged in to app by "toka.adel@gmail.com" and "258369"...........passed
+When user search for product "Flower Girl Bracelet".........................passed
+And user go to a product and press add to wishlist..........................passed
+Then product would be added to wishlist.....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="add different products to compare List" name="Logged user could add different products to compare list" time="36.71">
+<system-out><![CDATA[Given user logged in to app "toka.adel@gmail.com" and "258369"..............passed
+When user search product "Apple MacBook"....................................passed
+And user go to a product and press add to compare List......................passed
+Then product would be added to compare List.................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Create successful Order" name="Create successful Order" time="51.197">
+<system-out><![CDATA[Given user logged to the app "toka.adel@gmail.com" and "258369".............passed
+And user Searched for "Pride and Prejudice".................................passed
+And user found product and add it to cart...................................passed
+When user go to cart........................................................passed
+And user agree with term....................................................passed
+And user press checkout.....................................................passed
+And user enter billing data "Egypt" and "Giza" and "faisal" and "789" and "021589758".passed
+Then order successfully complete............................................passed
+]]></system-out>
+</testcase>
+</testsuite>
