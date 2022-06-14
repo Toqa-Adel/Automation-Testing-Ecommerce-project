@@ -7,5 +7,7 @@ Feature: switching between currencies US-Euro
 
     Scenario: Logged User could switch between currencies US-Euro
      When user go to currencies options
-     And user select currency "Euro" and currency switched
+     And user select currency "Euro"
+      And navigate to any category
+    Then currency switched
 
