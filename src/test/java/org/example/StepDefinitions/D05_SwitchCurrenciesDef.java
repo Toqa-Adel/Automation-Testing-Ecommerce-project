@@ -1,10 +1,13 @@
 package org.example.StepDefinitions;
 
+import io.cucumber.java.en.Then;
 import org.example.Pages.CurrenciesPage;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 
 public class D05_SwitchCurrenciesDef {
     WebDriver driver = null;
@@ -21,10 +24,23 @@ public class D05_SwitchCurrenciesDef {
     Thread.sleep(2000);
     }
 
-    @And("^user select currency \"(.*)\" and currency switched$")
+    @And("^user select currency \"(.*)\"$")
     public void setCurrency(String curr){
         currency.currBox().sendKeys(curr);
         currency.currBox().click();
+    }
+
+    @And("navigate to any category")
+    public void search_category(){
+        Hooks.driver.navigate().to("https://demo.nopcommerce.com/shoes");
+    }
+
+    @Then("currency switched")
+    public void currency_check(){
+        String Actual = Hooks.driver.findElement(By.className("actual-price")).getText();
+        //System.out.println("********actual result is: "+Actual);
+        String Expected = "€";
+        Assert.assertEquals(Actual.contains(Expected), true);
     }
 
 }
